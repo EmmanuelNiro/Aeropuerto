@@ -1,0 +1,23 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($clientes as $cliente): ?>
+            <tr>
+                <td><?php echo $cliente['nombre']; ?></td>
+                <td><?php echo $cliente['email']; ?></td>
+                <td>
+                    <a href="<?php echo site_url('clientes/editar/'.$cliente['_id']); ?>">Editar</a>
+                    <a href="<?php echo site_url('clientes/eliminar/'.$cliente['_id']); ?>">Eliminar</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
